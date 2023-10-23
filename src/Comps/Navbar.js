@@ -31,24 +31,31 @@ const Navbar = (props) => {
       <div className="flex ml-3 gap-2">
         {!Logged && (
           <Link to="/login">
-            <button>Login</button>
-          </Link>
-        )}
-        {!Logged && (
-          <Link to="/signup">
             <button
               onClick={() => {
                 setLogged(false);
                 toast.success("Logged In");
               }}
             >
-              Signup
+              Login
             </button>
+          </Link>
+        )}
+        {!Logged && (
+          <Link to="/signup">
+            <button>Signup</button>
           </Link>
         )}
         {Logged && (
           <Link to="/">
-            <button>Logout</button>
+            <button
+              onClick={() => {
+                setLogged(false);
+                toast.success("Logged In");
+              }}
+            >
+              Logout
+            </button>
           </Link>
         )}
         {Logged && (

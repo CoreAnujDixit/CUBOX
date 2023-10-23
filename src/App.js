@@ -17,6 +17,14 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route
+          path="*"
+          element={
+            <div className="flex justify-center items-center">
+              Uncle Jee Paani Peela Dejeye 404
+            </div>
+          }
+        />
       </Routes>
     </div>
   );
