@@ -14,7 +14,7 @@ function App() {
       <Navbar Logged={Logged} setLogged={setLogged} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login setLogged={setLogged} />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route

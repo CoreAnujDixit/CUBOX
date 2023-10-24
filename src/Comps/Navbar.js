@@ -1,3 +1,4 @@
+// import { toast } from "react-hot-toast";
 import { toast } from "react-hot-toast";
 import { Link, NavLink } from "react-router-dom";
 
@@ -34,7 +35,6 @@ const Navbar = (props) => {
             <button
               onClick={() => {
                 setLogged(false);
-                toast.success("Logged In");
               }}
             >
               Login
@@ -51,7 +51,7 @@ const Navbar = (props) => {
             <button
               onClick={() => {
                 setLogged(false);
-                toast.success("Logged In");
+                toast.success("Logged Out")
               }}
             >
               Logout

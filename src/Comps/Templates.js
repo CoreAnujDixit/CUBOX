@@ -11,7 +11,7 @@ const Templates = ({ title, desc1, desc2, fromtype, setLogged }) => {
           <span>{desc1}</span>
           <span>{desc2}</span>
         </p>
-        {fromtype === "signup" ? <Signupform /> : <Loginform />}
+        {fromtype === "signup" ? <Signupform setLogged={setLogged} /> : <Loginform setLogged={setLogged} />}
         <div>
           <div></div>
           <p>or</p>
@@ -30,6 +30,7 @@ const Templates = ({ title, desc1, desc2, fromtype, setLogged }) => {
         <img
           src="https://i.postimg.cc/SN58Rmmq/Forgot-password-cuate.png"
           alt=""
+          width={400}
         />
       </div>
     </div>

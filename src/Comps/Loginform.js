@@ -1,7 +1,18 @@
 import React, { useState } from "react";
 import { AiFillLock, AiFillUnlock } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-hot-toast";
 
-const Loginform = () => {
+
+const Loginform = ({ setLogged }) => {
+  const navigate = useNavigate();
+  function submitHandler(event) {
+    event.preventDefault();
+    setLogged(true);
+    toast.success("Logged in")
+    navigate("/dashboard")
+
+  }
   const [formdata, setFormData] = useState({
     email: "",
     password: "",
@@ -17,7 +28,7 @@ const Loginform = () => {
 
   return (
     <div>
-      <form action="">
+      <form action="" onSubmit={submitHandler}>
         <label htmlFor="email">
           <p>
             Email <sup>*</sup>
