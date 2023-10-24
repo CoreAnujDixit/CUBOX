@@ -27,8 +27,8 @@ const Loginform = ({ setLogged }) => {
   };
 
   return (
-    <div>
-      <form action="" onSubmit={submitHandler}>
+    <div className="item-center ml-24">
+      <form action="" onSubmit={submitHandler} >
         <label htmlFor="email">
           <p>
             Email <sup>*</sup>

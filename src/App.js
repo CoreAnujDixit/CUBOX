@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login setLogged={setLogged} />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/signup" element={<Signup setLogged={setLogged} />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route
           path="*"
