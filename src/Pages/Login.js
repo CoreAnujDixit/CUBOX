@@ -1,8 +1,18 @@
 import React from 'react'
+import Templates from '../Comps/Templates'
 
-const Login = () => {
+const Login = ({ setLogged }) => {
   return (
-    <div>Login</div>
+    <div>
+      <Templates
+
+        title="Welcome Back"
+        desc1="Hey There"
+        desc2="Hope You FINE!"
+        fromtype="Login"
+        setLogged={setLogged}
+      />
+    </div>
   )
 }
 

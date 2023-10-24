@@ -1,4 +1,6 @@
 import React from "react";
+import Loginform from "./Loginform";
+import Signupform from "./Signupfrom";
 
 const Templates = ({ title, desc1, desc2, fromtype, setLogged }) => {
   return (
@@ -9,7 +11,7 @@ const Templates = ({ title, desc1, desc2, fromtype, setLogged }) => {
           <span>{desc1}</span>
           <span>{desc2}</span>
         </p>
-        {formtype === "signup" ? <Signupfrom /> : <Loginform />}
+        {fromtype === "signup" ? <Signupform /> : <Loginform />}
         <div>
           <div></div>
           <p>or</p>

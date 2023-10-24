@@ -1,22 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiFillLock, AiFillUnlock } from "react-icons/ai";
 
 const Loginform = () => {
-  const [fromdata, setfromdata] = useState({
+  const [formdata, setFormData] = useState({
     email: "",
     password: "",
   });
-  const [showPassword, setshowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+
   const changeHandler = (event) => {
-    setfromdata((prevData) => ({
+    setFormData((prevData) => ({
       ...prevData,
       [event.target.name]: event.target.value,
     }));
   };
+
   return (
     <div>
       <form action="">
-        <label htmlFor="">
+        <label htmlFor="email">
           <p>
             Email <sup>*</sup>
           </p>
@@ -24,13 +26,13 @@ const Loginform = () => {
             type="email"
             required
             value={formdata.email}
-            onClick={changeHandler}
+            onChange={changeHandler}
             placeholder="Email ID"
             name="email"
           />
         </label>
 
-        <label htmlFor="">
+        <label htmlFor="password">
           <p>
             Password <sup>*</sup>
           </p>
@@ -38,11 +40,11 @@ const Loginform = () => {
             type={showPassword ? "text" : "password"}
             required
             value={formdata.password}
-            onClick={changeHandler}
+            onChange={changeHandler}
             placeholder="Password"
             name="password"
           />
-          <span onClick={() => setshowPassword((prev) => !prev)}>
+          <span onClick={() => setShowPassword((prev) => !prev)}>
             {showPassword ? <AiFillUnlock /> : <AiFillLock />}
           </span>
           <p>Forget Password</p>
